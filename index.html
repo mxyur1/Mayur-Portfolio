@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mayur Jondhale — AI/ML Engineer</title>
+<meta name="description" content="Mayur Jondhale — AI/ML Engineer. MSc Artificial Intelligence, Aston University. Multimodal deepfake detection, computer vision, full-stack development.">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="side-nav" id="sideNav">
+  <a href="#top" data-label="Top"><span class="side-nav-label">Top</span></a>
+  <a href="#story" data-label="About"><span class="side-nav-label">About</span></a>
+  <a href="#projects" data-label="Projects"><span class="side-nav-label">Projects</span></a>
+  <a href="#experience" data-label="Experience"><span class="side-nav-label">Experience</span></a>
+  <a href="#skills" data-label="Skills"><span class="side-nav-label">Skills</span></a>
+  <a href="#education" data-label="Education"><span class="side-nav-label">Education</span></a>
+  <a href="#contact" data-label="Contact"><span class="side-nav-label">Contact</span></a>
+</div>
+
+<header class="nav">
+  <div class="nav-inner">
+    <a href="#top" style="display:flex;align-items:center;gap:12px;text-decoration:none;">
+      <span class="monogram">MJ</span>
+      <span class="mobile-hide" style="font-weight:600;color:var(--ink);">Mayur Jondhale</span>
+    </a>
+    <nav class="nav-links">
+      <a href="#story" class="mobile-hide">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#experience" class="mobile-hide">Experience</a>
+      <a href="#contact">Contact</a>
+      <a href="Mayur_Jondhale_CV.pdf" class="btn btn-primary nav-cta">Download CV</a>
+    </nav>
+  </div>
+</header>
+
+<section id="top" class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="eyebrow">AI / ML Engineer</span>
+      <h1>Mayur Jondhale</h1>
+      <div class="role-line">MSc Artificial Intelligence (Merit) — Aston University</div>
+      <p class="hero-pitch">I build multimodal AI systems that catch what single-signal detectors miss — most recently, a deepfake detection pipeline that fuses video and audio evidence instead of trusting either one alone.</p>
+      <div class="meta-line">United Kingdom · Open to relocation &amp; hybrid roles · Graduate visa (valid until Feb 2028) — full right to work in the UK</div>
+      <div class="hero-actions">
+        <a href="#projects" class="btn btn-primary">View Projects</a>
+        <a href="Mayur_Jondhale_CV.pdf" class="btn btn-ghost">Download CV</a>
+        <a href="#contact" class="btn btn-ghost">Get in Touch</a>
+      </div>
+    </div>
+    <div class="editor-window reveal">
+      <div class="editor-titlebar">
+        <span class="editor-dot red"></span><span class="editor-dot yellow"></span><span class="editor-dot green"></span>
+        <span class="editor-filename">profile.py</span>
+      </div>
+      <div class="editor-body">
+        <div class="code-block">
+          <div class="code-line"><span class="syn-com"># who's writing this</span></div>
+          <div class="code-line"><span class="syn-kw">class</span> <span class="syn-cls">MayurJondhale</span><span class="syn-punc">:</span></div>
+          <div class="code-line">&nbsp;&nbsp;<span class="syn-prop">role</span>      <span class="syn-punc">=</span> <span class="syn-str">"AI/ML Engineer"</span></div>
+          <div class="code-line">&nbsp;&nbsp;<span class="syn-prop">education</span> <span class="syn-punc">=</span> <span class="syn-str">"MSc AI (Merit), Aston University"</span></div>
+          <div class="code-line">&nbsp;&nbsp;<span class="syn-prop">focus</span>     <span class="syn-punc">=</span> <span class="syn-str">"multimodal deepfake detection"</span></div>
+          <div class="code-line">&nbsp;&nbsp;<span class="syn-prop">location</span>  <span class="syn-punc">=</span> <span class="syn-str">"United Kingdom"</span></div>
+          <div class="code-line">&nbsp;&nbsp;<span class="syn-prop">status</span>    <span class="syn-punc">=</span> <span class="syn-str">"open_to_work"</span>  <span class="syn-com"># Graduate visa · no sponsorship</span></div>
+          <div class="code-line">&nbsp;</div>
+          <div class="code-line">&nbsp;&nbsp;<span class="syn-kw">def</span> <span class="syn-cls">philosophy</span><span class="syn-punc">(self):</span></div>
+          <div class="code-line">&nbsp;&nbsp;&nbsp;&nbsp;<span class="syn-kw">return</span> <span class="syn-str">"fuse signals — don't trust one alone"</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="wave-strip">
+  <svg id="waveform" viewBox="0 0 800 60" preserveAspectRatio="none"></svg>
+</div>
+
+<section id="results" class="alt">
+  <div class="wrap">
+    <div class="readout reveal">
+      <div class="cmd">python evaluate.py --fusion=late --splits=subject-disjoint</div>
+      <div class="readout-row"><span class="k">audio_branch (CNN)</span><span class="v good">AUC 0.981</span></div>
+      <div class="readout-row"><span class="k">video_branch (ResNet-18)</span><span class="v good">AUC 0.880</span></div>
+      <div class="readout-row"><span class="k">multimodal fusion (audio + video)</span><span class="v good">AUC 0.933</span></div>
+      <div class="readout-row"><span class="k">video_branch @ DFDC (unseen, in-the-wild)</span><span class="v warn">AUC 0.781 — domain shift</span></div>
+      <div class="readout-note">Evaluated across three datasets (VidTIMIT, DeepfakeTIMIT, DFDC) with subject-disjoint train/test splits — the model is never tested on an identity it trained on.</div>
+    </div>
+  </div>
+</section>
+
+<section id="story">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow comment">About</span>
+      <h2>How I got here</h2>
+    </div>
+    <div class="story-grid reveal">
+      <div class="story-card">
+        <div class="stat"><span>Grew up in</span><span>Pune, India</span></div>
+        <div class="stat"><span>Now based in</span><span>United Kingdom</span></div>
+        <div class="stat"><span>Path</span><span>BSc CS → MSc AI</span></div>
+        <div class="stat"><span>Turning point</span><span>LLMs going mainstream</span></div>
+      </div>
+      <div class="story-text">
+        <p>I grew up in Pune, India, drawn to computers early — more interested in how games and machines worked than almost anything else. When it came time to choose a stream after school, Science was the obvious call over Arts or Commerce; I liked maths, but not enough to give up computers for it. That pull carried straight through into a BSc in Computer Science.</p>
+        <p>I could have started a software career in India straight after graduating. Instead, I chose to go further — and the timing lined up with the moment large language models stopped being a research curiosity and became something everyone was suddenly using. Watching tools like ChatGPT and Claude go from novelty to genuinely useful, in real time, is what convinced me AI was where I wanted to build a career, not just study it.</p>
+        <p>That decision took me to Aston University in Birmingham for an MSc in Artificial Intelligence — a long way from home. The hardest part was never the coursework; it was the distance from my family, further than I'd ever lived from them before. Sticking with it anyway taught me more about persistence than any single module did, and it's that same mindset I bring to finishing what I start.</p>
+        <p>Now I'm focused on turning that into a full-time role in AI — and building a portfolio that actually shows the work, not just lists it.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="projects" class="alt">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow comment">Projects</span>
+      <h2>Selected work</h2>
+      <p>One research project and two shipped applications — spanning model design, systems design, and delivery.</p>
+    </div>
+
+    <div class="project featured reveal">
+      <span class="filepath">~/dissertation/deepfake-detection</span>
+      <span class="eyebrow">MSc Dissertation · Aston University · Supervised by Prof. Nitin Naik</span>
+      <h3>Multimodal Deepfake Detection for Audio &amp; Video</h3>
+      <p class="desc">Most deepfake detectors judge a clip on video alone, or audio alone — which means a fake with convincing visuals but flawed audio (or vice versa) can slip through. This project builds a pipeline that weighs both signals together, then tests whether that actually helps once the clips get harder to classify.</p>
+
+      <div class="pipeline">
+        <div class="pipe-node">video frames → face crop → ResNet-18</div>
+        <span class="pipe-arrow">＋</span>
+        <div class="pipe-node">audio → log-mel spectrogram → custom CNN</div>
+        <span class="pipe-arrow">→</span>
+        <div class="pipe-node">late fusion</div>
+        <span class="pipe-arrow">→</span>
+        <div class="pipe-node" style="border-color:var(--ink);">real / fake</div>
+      </div>
+
+      <p class="desc">Trained with a two-stage transfer-learning schedule — the ResNet-18 backbone frozen while the new head stabilises, then fully unfrozen for fine-tuning at a lower learning rate — with class-weighted loss to handle imbalanced real/fake samples. Every experiment ran on CPU only. The single most important design choice was <strong style="color:var(--ink);">subject-disjoint splitting</strong>: identities in the test set never appear in training, so the model has to learn genuine deepfake artefacts rather than memorising faces.</p>
+
+      <img class="project-img" src="img/chart-auc-results.jpg" alt="Bar chart of ROC-AUC results: audio branch 0.981, video branch 0.880, multimodal fusion 0.933, video branch on DFDC 0.781">
+
+      <div class="tags">
+        <span class="tag">Python</span><span class="tag">PyTorch</span><span class="tag">ResNet-18</span>
+        <span class="tag">CNN</span><span class="tag">Transfer Learning</span><span class="tag">Signal Processing</span>
+      </div>
+      <a class="project-link" href="https://github.com/mxyur1/Deepfake-Detection-using-AI-for-Audio-and-Video" target="_blank" rel="noopener">View pipeline on GitHub →</a>
+    </div>
+
+    <div class="project reveal">
+      <span class="filepath">~/academic/student-result-monitoring</span>
+      <span class="eyebrow">Team Project · 3 members · TY BSc(CS)</span>
+      <h3>Automated Student Result Monitoring</h3>
+      <p class="desc">A role-based web application built with a 3-person team to replace a college's manual, paper-based result process. Designed the relational schema and contributed to the ER/UML system design alongside admin-side workflows for managing classes, subjects, students, results and notices — plus secure result lookup for students by roll ID.</p>
+      <div class="shot-grid">
+        <div class="shot"><img src="img/screenshot-home.jpg" alt="Automated Student Result Monitoring home page with notice board"><div class="shot-cap">Home &amp; notice board</div></div>
+        <div class="shot"><img src="img/screenshot-dashboard.jpg" alt="Admin dashboard showing classes, subjects and results declared"><div class="shot-cap">Admin dashboard</div></div>
+        <div class="shot"><img src="img/screenshot-search.jpg" alt="Student result search by roll ID"><div class="shot-cap">Student result lookup</div></div>
+      </div>
+      <div class="tags">
+        <span class="tag">PHP</span><span class="tag">MySQL</span><span class="tag">Apache</span><span class="tag">HTML/JS</span>
+      </div>
+      <a class="project-link" href="https://github.com/mxyur1/Student-Result-Monitoring" target="_blank" rel="noopener">View on GitHub →</a>
+    </div>
+
+    <div class="project reveal">
+      <span class="filepath">~/freelance/ecommerce-storefront</span>
+      <span class="eyebrow">Freelance · Client Work</span>
+      <h3>Custom Clothing Storefront</h3>
+      <p class="desc">A responsive e-commerce storefront delivered end-to-end for a client — product browsing, filtering, and cart flow — with cross-browser and cross-device testing built into the delivery process.</p>
+      <div class="tags">
+        <span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span><span class="tag">Bootstrap</span>
+      </div>
+      <a class="project-link" href="https://mxyur1.github.io/Ecommerce-Clothing" target="_blank" rel="noopener">View live site →</a>
+    </div>
+  </div>
+</section>
+
+<section id="experience">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow comment">Experience</span>
+      <h2>Where I've worked</h2>
+    </div>
+    <div class="reveal">
+      <div class="xp-item">
+        <div class="xp-top"><h3>Postgraduate Mentor — Aston University</h3><span class="xp-date">Jun 2025 – Aug 2025</span></div>
+        <ul>
+          <li>Mentored incoming MSc Artificial Intelligence students through Aston University's Postgraduate Mentoring Scheme, helping them settle into postgraduate study</li>
+          <li>Offered guidance on coursework planning, module selection, and navigating university systems, acting as a first point of contact for academic and practical questions</li>
+        </ul>
+      </div>
+      <div class="xp-item">
+        <div class="xp-top"><h3>Freelance Web Developer — Self-Employed</h3><span class="xp-date">Nov 2024 – Dec 2024</span></div>
+        <ul>
+          <li>Designed and built the responsive front end for an e-commerce clothing website for a client, using HTML, CSS, JavaScript, and Bootstrap</li>
+          <li>Built the product browsing and checkout page layouts with an interactive UI, ensuring a responsive experience across browsers and devices</li>
+          <li>Worked independently with the client, from gathering requirements through to a functional front-end prototype</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="skills" class="alt">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow comment">Skills</span>
+      <h2>Toolkit</h2>
+    </div>
+    <div class="skill-groups reveal">
+      <div class="skill-group">
+        <h3>AI / Machine Learning</h3>
+        <div class="chip-row">
+          <span class="chip">PyTorch</span><span class="chip">TensorFlow</span><span class="chip">Scikit-learn</span>
+          <span class="chip">Computer Vision</span><span class="chip">Deep Learning</span><span class="chip">Model Evaluation</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <h3>Languages</h3>
+        <div class="chip-row">
+          <span class="chip">Python</span><span class="chip">Java</span><span class="chip">JavaScript</span>
+          <span class="chip">C</span><span class="chip">C++</span><span class="chip">SQL</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <h3>Web &amp; Backend</h3>
+        <div class="chip-row">
+          <span class="chip">HTML</span><span class="chip">CSS</span><span class="chip">Bootstrap</span>
+          <span class="chip">PHP</span><span class="chip">REST APIs</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <h3>Data &amp; Tools</h3>
+        <div class="chip-row">
+          <span class="chip">MySQL</span><span class="chip">Git</span>
+          <span class="chip">Linux</span><span class="chip">Jupyter</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="education">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow comment">Education &amp; Certifications</span>
+      <h2>Background</h2>
+    </div>
+    <div class="reveal">
+      <div class="edu-item">
+        <div class="edu-top"><h3>MSc Artificial Intelligence (Merit) — Aston University</h3><span class="edu-date">Sept 2024 – Jan 2026</span></div>
+      </div>
+      <div class="edu-item">
+        <div class="edu-top"><h3>BSc Computer Science (CGPA 8.4/10) — MIT Arts, Commerce &amp; Science College, India</h3><span class="edu-date">Sept 2020 – Jun 2023</span></div>
+      </div>
+      <div class="edu-item">
+        <div class="edu-top"><h3>NVIDIA — Certificate of Competency: Getting Started with Deep Learning</h3><span class="edu-date">Jul 2025</span></div>
+      </div>
+      <div class="edu-item">
+        <div class="edu-top"><h3>Teknowell EduTech — Full Stack Java Developer</h3><span class="edu-date">2023</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="contact">
+  <div class="wrap">
+    <div class="reveal">
+      <span class="eyebrow comment" style="color:#7FE0D3;">Contact</span>
+      <h2>Let's talk</h2>
+      <p style="max-width:50ch;">Open to AI Engineer, ML Engineer, and Data Scientist roles across the UK. Graduate visa (valid until Feb 2028) — full right to work, no sponsorship required.</p>
+      <div class="contact-grid">
+        <a class="btn btn-primary" href="mailto:mayurjondhale0111@gmail.com">Email me</a>
+        <a class="btn btn-ghost" href="tel:+447721840486">+44 7721 840486</a>
+        <a class="btn btn-ghost" href="https://www.linkedin.com/in/mayur-jondhale-0b8220a" target="_blank" rel="noopener">LinkedIn</a>
+        <a class="btn btn-ghost" href="https://github.com/mxyur1" target="_blank" rel="noopener">GitHub</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>© 2026 Mayur Jondhale. Built to replace a very outdated Full Stack Developer page.</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
